@@ -6,9 +6,10 @@ import {
   Textarea,
   Heading,
   Text,
+  Flex,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { useColorMode } from "../../Store/useColorMode";
+import { useColorMode } from "../../Store/useColorMode.ts";
 
 const ContactForm = () => {
   const { colorMode } = useColorMode();
@@ -18,26 +19,32 @@ const ContactForm = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     window.location.href = `mailto:pragyaaggawal1999@gmail.com?subject=Contact Form&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AMessage: ${formData.message}`;
   };
 
   return (
-    <Box id="contactMe" color={!colorMode ? "gray.100" : "gray.800"}>
+    <Box id="contactMe" color={!colorMode ? "gray.100" : "#014f4f"}>
       <Text fontSize="3xl" fontWeight="bold" mb={4} textAlign="center">
         Contact me
       </Text>
+      <Flex p={4} justifyContent={"center"} fontSize={"xl"}>
+        <Text>
+          If you want to know more about me or my work, send me a message. I'd
+          love to hear from you.
+        </Text>
+      </Flex>
       <Box
         p={6}
         maxW="500px"
         mx="auto"
         borderRadius="lg"
-        bg={!colorMode ? "gray.800" : "white"}
+        bg={colorMode ? "#2bbbc2" : "gray.800"}
         boxShadow="0px 4px 10px rgba(116, 120, 124, 0.3)" // Blue shadow effect
       >
         <form onSubmit={handleSubmit}>
@@ -78,7 +85,7 @@ const ContactForm = () => {
             <Textarea
               placeholder="Enter your message"
               name="message"
-              rows="4"
+              // rows="4"
               value={formData.message}
               onChange={handleChange}
             />
@@ -86,7 +93,12 @@ const ContactForm = () => {
           </Field.Root>
 
           {/* Submit Button */}
-          <Button type="submit" colorScheme="blue" width="full">
+          <Button
+            type="submit"
+            background={colorMode ? "#014f4f" : "black"}
+            colorScheme="blue"
+            width="full"
+          >
             Send Message
           </Button>
         </form>
@@ -102,7 +114,7 @@ const ContactForm = () => {
           width="100%"
           height="500px"
           style={{ border: 0 }}
-          allowFullScreen=""
+          // allowFullScreen="true"
           loading="lazy"
         />
       </Box>

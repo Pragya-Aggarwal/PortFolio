@@ -6,7 +6,8 @@ import adminImage from "./admin2.png";
 import codingGirl from "./coding-girl.gif";
 import mifinLos from "./mifin-los.png";
 import audit from "./audit.jpg";
-import nodes from "./nodes-bg.gif";
+import notion from "./Notion.png";
+import hello from "./hello.gif";
 
 export {
   blackLogo,
@@ -17,5 +18,6 @@ export {
   codingGirl,
   mifinLos,
   audit,
-  nodes,
+  notion,
+  hello,
 };

@@ -1,4 +1,4 @@
-import { adminImage, audit, mifinLos, posvImage } from "../../assets";
+import { adminImage, audit, mifinLos, notion, posvImage } from "../../assets";
 
 interface Project {
   title: string;
@@ -7,9 +7,20 @@ interface Project {
   tags: string[];
   githubUrl?: string;
   year: string;
+  live?: string;
 }
 
 export const projects: Project[] = [
+  {
+    title: "Notion Clone",
+    description:
+      "The project involves designing and developing a user interface using React.js and Bootstrap to create a modern, and visually appealing web application. The UI will feature a clean, intuitive layout that adapts seamlessly to different screen sizes, ensuring optimal user experience across devices.",
+    imageUrl: notion,
+    tags: ["React", "Bootstrap"],
+    githubUrl: "#",
+    year: "2024",
+    live: "https://fluffy-narwhal-722178.netlify.app/",
+  },
   {
     title: "POSV",
     description:

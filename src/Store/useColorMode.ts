@@ -1,7 +1,11 @@
 import { create } from "zustand";
 
-export const useColorMode = create<any>((set: any) => ({
+interface ColorModeState {
+  colorMode: boolean;
+  setChangeColorMode: () => void;
+}
+
+export const useColorMode = create<ColorModeState>((set) => ({
   colorMode: false,
-  setChangeColorMode: () =>
-    set((state: boolean) => ({ colorMode: !state.colorMode })),
+  setChangeColorMode: () => set((state) => ({ colorMode: !state.colorMode })),
 }));
