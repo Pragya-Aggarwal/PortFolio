@@ -286,7 +286,7 @@ const ProjectsPage = () => {
                   alt={project?.title}
                   borderRadius="md"
                   mb={4}
-                  objectFit="cover"
+                  objectFit="contain"
                   w="100%"
                 />
                 <Text

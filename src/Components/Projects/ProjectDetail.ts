@@ -1,4 +1,4 @@
-import { adminImage, audit, mifinLos, notion, posvImage } from "../../assets";
+import { adminImage, audit, mifinLos, notion, portfolio, posvImage } from "../../assets";
 
 interface Project {
   title: string;
@@ -11,6 +11,16 @@ interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    title: "Portfolio",
+    description:
+      "My personal project where I demonstrate my skills, work, and technical expertise. It includes dark and light mode support, responsive design, and smooth user interactions.",
+    imageUrl: portfolio,
+    tags: ["React", "Chakra UI", "Vite", "Framer motion", "tsparticles"],
+    githubUrl: "https://github.com/Pragya-Aggarwal/PortFolio",
+    year: "2024",
+    live: "https://jocular-fudge-9c3a83.netlify.app/",
+  },
   {
     title: "Notion Clone",
     description:

@@ -8,6 +8,7 @@ import mifinLos from "./mifin-los.png";
 import audit from "./audit.jpg";
 import notion from "./Notion.png";
 import hello from "./hello.gif";
+import portfolio from "./portfolio.png";
 
 export {
   blackLogo,
@@ -20,4 +21,5 @@ export {
   audit,
   notion,
   hello,
+  portfolio,
 };
